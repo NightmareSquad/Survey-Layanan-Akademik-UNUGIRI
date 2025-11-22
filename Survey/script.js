@@ -1,4 +1,5 @@
 let currentStep = 0;
+// PASTIKAN API_URL INI ADALAH URL WEB APP GOOGLE APPS SCRIPT ANDA
 const API_URL = "https://script.google.com/macros/s/AKfycbzgyYBspAWmYrW19Wpn5wHBnAjZQtH2c_Mf1dnLQ0fPF8iM9Y6awZFIV5ypV4CBEwcr/exec";
 
 // --- Pindah Step ---
@@ -75,8 +76,7 @@ async function sendVote(question, answer) {
             API_URL,
             {
                 method: "POST",
-                // HILANGKAN headers: { "Content-Type": "application/json" }
-                // DAN TAMBAHKAN mode: 'no-cors' untuk mengatasi pemblokiran Live Server
+                // Menggunakan mode: 'no-cors' untuk mengatasi pemblokiran Live Server/Hosting Statis
                 mode: 'no-cors', 
                 body: JSON.stringify(payload)
             }
@@ -96,3 +96,11 @@ async function sendVote(question, answer) {
         statusDiv.style.color = "#d32f2f";
     }
 }
+
+// Inisialisasi: Pastikan langkah pertama aktif saat dimuat
+document.addEventListener('DOMContentLoaded', () => {
+    const steps = document.querySelectorAll(".question-step");
+    if (steps.length > 0) {
+        steps[0].classList.add('active');
+    }
+});
