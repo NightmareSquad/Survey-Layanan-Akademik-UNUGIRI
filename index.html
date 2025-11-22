@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Layanan Akademik</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="bg-overlay"></div>
+
+<div class="container fade-in">
+    <h2 class="title slide-down">Survey Layanan Akademik</h2>
+
+    <div id="steps">
+
+        <!-- STEP 1 -->
+        <div class="question-step active">
+            <p>1. Bagaimana kecepatan layanan administrasi akademik?</p>
+            <div class="btn-wrap">
+                <button onclick="sendAnswer('Kecepatan layanan administrasi akademik','Sangat Bagus')">Sangat Bagus</button>
+                <button onclick="sendAnswer('Kecepatan layanan administrasi akademik','Bagus')">Bagus</button>
+                <button onclick="sendAnswer('Kecepatan layanan administrasi akademik','Kurang Bagus')">Kurang Bagus</button>
+                <button onclick="sendAnswer('Kecepatan layanan administrasi akademik','Tidak Bagus')">Tidak Bagus</button>
+            </div>
+        </div>
+
+        <!-- STEP 2 -->
+        <div class="question-step">
+            <p>2. Bagaimana ketepatan informasi akademik yang diberikan?</p>
+            <div class="btn-wrap">
+                <button onclick="sendAnswer('Ketepatan informasi akademik','Sangat Bagus')">Sangat Bagus</button>
+                <button onclick="sendAnswer('Ketepatan informasi akademik','Bagus')">Bagus</button>
+                <button onclick="sendAnswer('Ketepatan informasi akademik','Kurang Bagus')">Kurang Bagus</button>
+                <button onclick="sendAnswer('Ketepatan informasi akademik','Tidak Bagus')">Tidak Bagus</button>
+            </div>
+        </div>
+
+        <!-- STEP 3 -->
+        <div class="question-step">
+            <p>3. Bagaimana kejelasan prosedur layanan akademik?</p>
+            <div class="btn-wrap">
+                <button onclick="sendAnswer('Kejelasan prosedur layanan akademik','Sangat Bagus')">Sangat Bagus</button>
+                <button onclick="sendAnswer('Kejelasan prosedur layanan akademik','Bagus')">Bagus</button>
+                <button onclick="sendAnswer('Kejelasan prosedur layanan akademik','Kurang Bagus')">Kurang Bagus</button>
+                <button onclick="sendAnswer('Kejelasan prosedur layanan akademik','Tidak Bagus')">Tidak Bagus</button>
+            </div>
+        </div>
+
+        <!-- STEP 4 -->
+        <div class="question-step">
+            <p>4. Bagaimana ketersediaan petugas layanan akademik?</p>
+            <div class="btn-wrap">
+                <button onclick="sendAnswer('Ketersediaan petugas layanan akademik','Sangat Bagus')">Sangat Bagus</button>
+                <button onclick="sendAnswer('Ketersediaan petugas layanan akademik','Bagus')">Bagus</button>
+                <button onclick="sendAnswer('Ketersediaan petugas layanan akademik','Kurang Bagus')">Kurang Bagus</button>
+                <button onclick="sendAnswer('Ketersediaan petugas layanan akademik','Tidak Bagus')">Tidak Bagus</button>
+            </div>
+        </div>
+
+        <!-- STEP 5 -->
+        <div class="question-step">
+            <p>5. Bagaimana keramahan petugas layanan akademik?</p>
+            <div class="btn-wrap">
+                <button onclick="sendAnswer('Keramahan petugas layanan akademik','Sangat Bagus')">Sangat Bagus</button>
+                <button onclick="sendAnswer('Keramahan petugas layanan akademik','Bagus')">Bagus</button>
+                <button onclick="sendAnswer('Keramahan petugas layanan akademik','Kurang Bagus')">Kurang Bagus</button>
+                <button onclick="sendAnswer('Keramahan petugas layanan akademik','Tidak Bagus')">Tidak Bagus</button>
+            </div>
+        </div>
+
+        <!-- STEP FINAL -->
+        <div class="question-step final-step">
+            <h3>Terima kasih telah mengisi survey! 🙏<br><br>
+            Semoga dilancarkan rezekinya, sehat jasmani & rohani, serta didekatkan jodohnya 🤍</h3>
+        </div>
+
+    </div>
+
+    <div id="status" class="status"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
